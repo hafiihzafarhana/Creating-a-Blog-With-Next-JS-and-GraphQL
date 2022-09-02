@@ -7,7 +7,7 @@ const PostDetails = ({data}) => {
   return (
     <div className='container mx-auto px-10 mb-8'>
       <Head>
-        <title>Remaja Ikhlas | {data.judul}</title>
+        <title>Remaja Ikhlas</title>
         <link rel = "icon" href = "G1rqUMSA.png" type = "image/x-icon"></link>
       </Head>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 '>
