@@ -1,9 +1,15 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 import { getDetailBlog, getBlog } from '../../Services'
-import {Categories, Header, Layout, PostCard, PostWidget, CommentForm, Comments, PostDetail} from './../../components'
+import {Categories, Header, Layout, PostCard, PostWidget, CommentForm, Comments, PostDetail, Loader} from './../../components'
 import Head from 'next/head'
 
 const PostDetails = ({data}) => {
+  console.log(data)
+  const router = useRouter();
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <div className='container mx-auto px-10 mb-8'>
       <Head>
